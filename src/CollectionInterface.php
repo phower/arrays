@@ -45,7 +45,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Serializ
      *
      * @param string|int $key
      * @param mixed $value
-     * @return \Phower\Arrays\AbstractCollection
+     * @return \Phower\Arrays\CollectionInterface
      */
     public function set($key, $value);
 
@@ -53,7 +53,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Serializ
      * Adds a value to the end of the collection.
      *
      * @param mixed $value
-     * @return \Phower\Arrays\AbstractCollection
+     * @return \Phower\Arrays\CollectionInterface
      */
     public function add($value);
 
@@ -77,7 +77,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Serializ
      * Removes an existing element.
      *
      * @param string|int $key
-     * @return \Phower\Arrays\AbstractCollection
+     * @return \Phower\Arrays\CollectionInterface
      */
     public function remove($key);
 
@@ -85,7 +85,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Serializ
      * Deletes all elements containing a given value.
      *
      * @param mixed $value
-     * @return \Phower\Arrays\AbstractCollection
+     * @return \Phower\Arrays\CollectionInterface
      */
     public function delete($value);
 
@@ -114,7 +114,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Serializ
      * Returns a new collection filtered by a callable.
      *
      * @param callable $callback
-     * @return \Phower\Arrays\AbstractCollection
+     * @return \Phower\Arrays\CollectionInterface
      */
     public function filter(callable $callback);
 
@@ -123,7 +123,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Serializ
      *
      * @param int $offset
      * @param int|null $length
-     * @return \Phower\Arrays\AbstractCollection
+     * @return \Phower\Arrays\CollectionInterface
      */
     public function slice($offset, $length = null);
 
@@ -131,7 +131,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Serializ
      * Applies a callable over all elements of the collection.
      *
      * @param callable $callback
-     * @return \Phower\Arrays\AbstractCollection
+     * @return \Phower\Arrays\CollectionInterface
      */
     public function map(callable $callback);
 }

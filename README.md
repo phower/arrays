@@ -23,6 +23,52 @@ composer require phower/arrays
 Getting Started
 ---------------
 
+### Collections
+
+Collections is the base concept of this package. Each collection wraps an array
+into a class with methods to handle its elements in a normalized way. Both concrete 
+and abstract classes are provided.
+
+```php
+// index.php
+require('path/to/vendor/autoload.php');
+
+use Phower\Arrays\Collection;
+
+$collection = new Collection();
+```
+
+Please review [Collection Interface](src/CollectionInterface.php) for more details
+on available methods.
+
+### Stacks
+
+Stacks are collections where elements are always added to the top of the internal
+array. This strategy allows a LIFO (Last In-First Out) handling.
+
+```php
+use Phower\Arrays\Stack;
+
+$stack = new Stack();
+```
+
+Please review [Stack Interface](src/StackInterface.php) for more details
+on available methods.
+
+## Queues
+
+Queues are collections with the ability to enqueue/dequeue elements. While enqueue
+is similiar to add method, dequeue always remove the returned element from the queue.
+
+```php
+use Phower\Arrays\Queue;
+
+$queue = new Queue();
+```
+
+Please review [Queue Interface](src/QueueInterface.php) for more details
+on available methods.
+
 Running Tests
 -------------
 
